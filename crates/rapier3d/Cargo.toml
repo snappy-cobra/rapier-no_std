@@ -57,7 +57,7 @@ simba = "0.8"
 approx = "0.5"
 rayon = { version = "1", optional = true }
 crossbeam = { version = "0.8", default-features = false, features = ["alloc"] }
-arrayvec = "0.7"
+arrayvec = { version = "0.7", default-features = false }
 bit-vec = "0.6"
 rustc-hash = "1"
 serde = { version = "1", features = [ "derive" ], optional = true }
