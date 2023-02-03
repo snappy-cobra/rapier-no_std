@@ -56,7 +56,7 @@ parry3d = "0.13"
 simba = "0.8"
 approx = "0.5"
 rayon = { version = "1", optional = true }
-crossbeam = "0.8"
+crossbeam = { version = "0.8", default-features = false, features = ["alloc"] }
 arrayvec = "0.7"
 bit-vec = "0.6"
 rustc-hash = "1"
