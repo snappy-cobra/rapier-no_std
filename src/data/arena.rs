@@ -11,7 +11,7 @@ use core::slice;
 use parry::partitioning::IndexedData;
 
 extern crate alloc;
-use alloc::boxed::Box;
+
 use alloc::vec;
 use alloc::vec::Vec;
 

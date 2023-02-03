@@ -8,8 +8,8 @@ use crate::geometry::{
 use crate::math::Real;
 use crate::pipeline::{EventHandler, PhysicsHooks, QueryPipeline};
 use crate::{dynamics::RigidBodySet, geometry::ColliderSet};
-use alloc::boxed::Box;
-use alloc::vec;
+
+
 use alloc::vec::Vec;
 
 /// The collision pipeline, responsible for performing collision detection between colliders.

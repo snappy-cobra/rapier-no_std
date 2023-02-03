@@ -1,9 +1,9 @@
 //! Structures related to geometry: colliders, shapes, etc.
 
 extern crate alloc;
-use alloc::boxed::Box;
-use alloc::vec;
-use alloc::vec::Vec;
+
+
+
 
 pub use self::broad_phase_multi_sap::{BroadPhasePairEvent, ColliderPair};
 

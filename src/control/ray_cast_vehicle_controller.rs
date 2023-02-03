@@ -1,7 +1,7 @@
 //! A vehicle controller based on ray-casting, ported and modified from Bullet’s `btRaycastVehicle`.
 
 extern crate alloc;
-use alloc::boxed::Box;
+
 use alloc::vec;
 use alloc::vec::Vec;
 

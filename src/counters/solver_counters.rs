@@ -2,9 +2,9 @@ use crate::counters::Timer;
 use core::fmt::{Display, Formatter, Result};
 
 extern crate alloc;
-use alloc::boxed::Box;
-use alloc::vec;
-use alloc::vec::Vec;
+
+
+
 
 /// Performance counters related to constraints resolution.
 #[derive(Default, Clone, Copy)]

@@ -1,6 +1,6 @@
 extern crate alloc;
-use alloc::boxed::Box;
-use alloc::vec;
+
+
 use alloc::vec::Vec;
 
 
@@ -632,8 +632,8 @@ mod test {
     };
     use crate::geometry::{BroadPhase, ColliderBuilder, ColliderSet};
     extern crate alloc;
-    use alloc::boxed::Box;
-    use alloc::vec;
+    
+    
     use alloc::vec::Vec;
 
     #[test]
