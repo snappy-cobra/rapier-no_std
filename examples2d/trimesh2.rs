@@ -135,7 +135,7 @@ const RAPIER_SVG_STR: &'static str = r#"
 "#;
 
 pub struct PathConvIter<'a> {
-    iter: std::slice::Iter<'a, usvg::PathSegment>,
+    iter: core::slice::Iter<'a, usvg::PathSegment>,
     prev: Point,
     first: Point,
     needs_end: bool,
