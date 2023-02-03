@@ -11,7 +11,7 @@ use crate::math::Real;
 use bit_vec::BitVec;
 use parry::bounding_volume::BoundingVolume;
 use parry::utils::hashmap::HashMap;
-use std::cmp::Ordering;
+use core::cmp::Ordering;
 
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 #[derive(Clone, Debug)]

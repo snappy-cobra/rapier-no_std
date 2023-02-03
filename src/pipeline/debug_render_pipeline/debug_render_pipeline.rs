@@ -14,7 +14,7 @@ use crate::math::{Isometry, Point, Real, Vector, DIM};
 use crate::pipeline::debug_render_pipeline::debug_render_backend::DebugRenderObject;
 use crate::pipeline::debug_render_pipeline::DebugRenderStyle;
 use crate::utils::WBasis;
-use std::any::TypeId;
+use core::any::TypeId;
 use hashbrown::HashMap;
 
 bitflags::bitflags! {

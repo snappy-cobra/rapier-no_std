@@ -7,7 +7,7 @@ extern crate rapier3d_f64 as rapier3d;
 use inflector::Inflector;
 
 use rapier_testbed3d::{Testbed, TestbedApp};
-use std::cmp::Ordering;
+use core::cmp::Ordering;
 
 mod debug_serialized3;
 

@@ -6,7 +6,7 @@ use wasm_bindgen::prelude::*;
 use inflector::Inflector;
 
 use rapier_testbed2d::{Testbed, TestbedApp};
-use std::cmp::Ordering;
+use core::cmp::Ordering;
 
 mod add_remove2;
 mod ccd2;

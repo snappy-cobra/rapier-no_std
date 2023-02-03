@@ -6,7 +6,7 @@ use wasm_bindgen::prelude::*;
 use inflector::Inflector;
 
 use rapier_testbed3d::{Testbed, TestbedApp};
-use std::cmp::Ordering;
+use core::cmp::Ordering;
 
 mod balls3;
 mod boxes3;

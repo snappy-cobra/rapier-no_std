@@ -524,7 +524,7 @@ impl<N, E> Graph<N, E> {
 
 /// An iterator over either the nodes without edges to them or from them.
 pub struct Externals<'a, N: 'a> {
-    iter: std::iter::Enumerate<std::slice::Iter<'a, Node<N>>>,
+    iter: core::iter::Enumerate<std::slice::Iter<'a, Node<N>>>,
     dir: Direction,
 }
 
@@ -791,7 +791,7 @@ where
 
 /// Iterator over all nodes of a graph.
 pub struct NodeReferences<'a, N: 'a> {
-    iter: std::iter::Enumerate<std::slice::Iter<'a, Node<N>>>,
+    iter: core::iter::Enumerate<std::slice::Iter<'a, Node<N>>>,
 }
 
 impl<'a, N> Iterator for NodeReferences<'a, N> {
