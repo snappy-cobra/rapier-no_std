@@ -1,4 +1,7 @@
+extern crate alloc;
 use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
 
 use crate::dynamics::{CoefficientCombineRule, MassProperties, RigidBodyHandle};
 use crate::geometry::{

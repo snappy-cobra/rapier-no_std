@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::dynamics::{RigidBodyHandle, RigidBodySet};
 use crate::geometry::{ColliderHandle, ColliderSet, Contact, ContactManifold};
 use crate::math::{Point, Real, Vector};

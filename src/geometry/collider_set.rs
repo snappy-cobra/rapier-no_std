@@ -1,8 +1,13 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::data::arena::Arena;
 use crate::dynamics::{IslandManager, RigidBodyHandle, RigidBodySet};
 use crate::geometry::{Collider, ColliderChanges, ColliderHandle, ColliderParent};
 use crate::math::Isometry;
-use std::ops::{Index, IndexMut};
+use core::ops::{Index, IndexMut};
 
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 #[derive(Clone, Default)]
@@ -24,11 +29,11 @@ impl ColliderSet {
     }
 
     pub(crate) fn take_modified(&mut self) -> Vec<ColliderHandle> {
-        std::mem::replace(&mut self.modified_colliders, vec![])
+        core::mem::replace(&mut self.modified_colliders, vec![])
     }
 
     pub(crate) fn take_removed(&mut self) -> Vec<ColliderHandle> {
-        std::mem::replace(&mut self.removed_colliders, vec![])
+        core::mem::replace(&mut self.removed_colliders, vec![])
     }
 
     /// An always-invalid collider handle.

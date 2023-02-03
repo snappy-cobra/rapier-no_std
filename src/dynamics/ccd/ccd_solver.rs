@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use super::TOIEntry;
 use crate::dynamics::{IslandManager, RigidBodyHandle, RigidBodySet};
 use crate::geometry::{ColliderParent, ColliderSet, CollisionEvent, NarrowPhase};
@@ -7,7 +12,7 @@ use crate::pipeline::{EventHandler, QueryPipeline, QueryPipelineMode};
 use crate::prelude::{ActiveEvents, CollisionEventFlags};
 use parry::query::{DefaultQueryDispatcher, QueryDispatcher};
 use parry::utils::hashmap::HashMap;
-use std::collections::BinaryHeap;
+use alloc::collections::BinaryHeap;
 
 pub enum PredictedImpacts {
     Impacts(HashMap<RigidBodyHandle, Real>),

@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::dynamics::solver::joint_constraint::joint_velocity_constraint::WritebackId;
 use crate::dynamics::solver::joint_constraint::{JointVelocityConstraintBuilder, SolverBody};
 use crate::dynamics::solver::DeltaVel;

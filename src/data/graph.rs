@@ -4,8 +4,14 @@
 // - It is always undirected.
 //! A stripped-down version of petgraph's UnGraph.
 
-use std::cmp::max;
-use std::ops::{Index, IndexMut};
+use core::cmp::max;
+use core::ops::{Index, IndexMut};
+
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 
 /// Node identifier.
 #[derive(Copy, Clone, Default, PartialEq, PartialOrd, Eq, Ord, Hash, Debug)]

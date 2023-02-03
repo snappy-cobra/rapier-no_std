@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::dynamics::solver::VelocityGroundConstraint;
 use crate::dynamics::{IntegrationParameters, MultibodyJointSet, RigidBodySet, RigidBodyVelocity};
 use crate::geometry::{ContactManifold, ContactManifoldIndex};
@@ -41,7 +46,7 @@ impl GenericVelocityGroundConstraint {
         let flipped = manifold.data.relative_dominance < 0;
 
         let (force_dir1, flipped_multiplier) = if flipped {
-            std::mem::swap(&mut handle1, &mut handle2);
+            core::mem::swap(&mut handle1, &mut handle2);
             (manifold.data.normal, -1.0)
         } else {
             (-manifold.data.normal, 1.0)

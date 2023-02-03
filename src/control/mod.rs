@@ -1,5 +1,10 @@
 //! Utilities for controlling the trajectories of objects in a non-physical way.
 
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 pub use self::character_controller::{
     CharacterAutostep, CharacterCollision, CharacterLength, EffectiveCharacterMovement,
     KinematicCharacterController,

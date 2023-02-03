@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use super::VelocitySolver;
 use crate::counters::Counters;
 use crate::dynamics::solver::{

@@ -1,7 +1,12 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::math::{AngVector, Vector, SPATIAL_DIM};
 use crate::utils::WReal;
 use na::{DVectorView, DVectorViewMut, Scalar};
-use std::ops::{AddAssign, Sub};
+use core::ops::{AddAssign, Sub};
 
 #[derive(Copy, Clone, Debug, Default)]
 #[repr(C)]
@@ -13,11 +18,11 @@ pub struct DeltaVel<N: Scalar + Copy> {
 
 impl<N: Scalar + Copy> DeltaVel<N> {
     pub fn as_slice(&self) -> &[N; SPATIAL_DIM] {
-        unsafe { std::mem::transmute(self) }
+        unsafe { core::mem::transmute(self) }
     }
 
     pub fn as_mut_slice(&mut self) -> &mut [N; SPATIAL_DIM] {
-        unsafe { std::mem::transmute(self) }
+        unsafe { core::mem::transmute(self) }
     }
 
     pub fn as_vector_slice(&self) -> DVectorView<N> {

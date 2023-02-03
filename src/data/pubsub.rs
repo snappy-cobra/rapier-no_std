@@ -1,7 +1,12 @@
 //! Publish-subscribe mechanism for internal events.
 
-use std::collections::VecDeque;
-use std::marker::PhantomData;
+use core::marker::PhantomData;
+
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+use alloc::collections::VecDeque;
 
 /// A permanent subscription to a pub-sub queue.
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]

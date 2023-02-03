@@ -1,5 +1,10 @@
 //! Structures related to geometry: colliders, shapes, etc.
 
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 pub use self::broad_phase_multi_sap::{BroadPhasePairEvent, ColliderPair};
 
 pub use self::broad_phase_multi_sap::BroadPhase;
@@ -186,13 +191,13 @@ pub use parry::shape::*;
 
 #[cfg(feature = "serde-serialize")]
 pub(crate) fn default_persistent_query_dispatcher(
-) -> std::sync::Arc<dyn parry::query::PersistentQueryDispatcher<ContactManifoldData, ContactData>> {
-    std::sync::Arc::new(parry::query::DefaultQueryDispatcher)
+) -> alloc::sync::Arc<dyn parry::query::PersistentQueryDispatcher<ContactManifoldData, ContactData>> {
+    alloc::sync::Arc::new(parry::query::DefaultQueryDispatcher)
 }
 
 #[cfg(feature = "serde-serialize")]
-pub(crate) fn default_query_dispatcher() -> std::sync::Arc<dyn parry::query::QueryDispatcher> {
-    std::sync::Arc::new(parry::query::DefaultQueryDispatcher)
+pub(crate) fn default_query_dispatcher() -> alloc::sync::Arc<dyn parry::query::QueryDispatcher> {
+    alloc::sync::Arc::new(parry::query::DefaultQueryDispatcher)
 }
 
 mod broad_phase_multi_sap;

@@ -1,5 +1,10 @@
 //! A vehicle controller based on ray-casting, ported and modified from Bullet’s `btRaycastVehicle`.
 
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::dynamics::{RigidBody, RigidBodyHandle, RigidBodySet};
 use crate::geometry::{ColliderHandle, ColliderSet, Ray};
 use crate::math::{Point, Real, Rotation, Vector};

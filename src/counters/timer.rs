@@ -1,4 +1,9 @@
-use std::fmt::{Display, Error, Formatter};
+use core::fmt::{Display, Error, Formatter};
+
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
 
 /// A timer.
 #[derive(Copy, Clone, Debug, Default)]

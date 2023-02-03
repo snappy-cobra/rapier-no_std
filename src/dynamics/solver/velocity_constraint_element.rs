@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use super::DeltaVel;
 use crate::math::{AngVector, Vector, DIM};
 use crate::utils::{WBasis, WDot, WReal};

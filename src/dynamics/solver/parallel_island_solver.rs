@@ -1,4 +1,4 @@
-use std::sync::atomic::{AtomicUsize, Ordering};
+use alloc::sync::atomic::{AtomicUsize, Ordering};
 
 use rayon::Scope;
 

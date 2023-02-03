@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use super::ParallelInteractionGroups;
 use super::{AnyJointVelocityConstraint, AnyVelocityConstraint, ThreadContext};
 use crate::dynamics::solver::categorization::{categorize_contacts, categorize_joints};
