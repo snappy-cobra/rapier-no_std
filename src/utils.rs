@@ -10,7 +10,7 @@ use na::{
 };
 use num::Zero;
 use simba::simd::SimdValue;
-use std::ops::IndexMut;
+use core::ops::IndexMut;
 
 use parry::utils::SdpMatrix3;
 use {

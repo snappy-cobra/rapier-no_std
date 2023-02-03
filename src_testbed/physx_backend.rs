@@ -21,7 +21,7 @@ use rapier::dynamics::{
 };
 use rapier::geometry::{Collider, ColliderSet};
 use rapier::prelude::JointAxesMask;
-use std::collections::HashMap;
+use hashbrown::HashMap;
 
 trait IntoNa {
     type Output;

@@ -1,6 +1,8 @@
 extern crate alloc;
+use alloc::boxed::Box;
 use alloc::vec;
 use alloc::vec::Vec;
+
 
 use super::{
     BroadPhasePairEvent, ColliderPair, SAPLayer, SAPProxies, SAPProxy, SAPProxyData, SAPRegionPool,
@@ -629,6 +631,10 @@ mod test {
         ImpulseJointSet, IslandManager, MultibodyJointSet, RigidBodyBuilder, RigidBodySet,
     };
     use crate::geometry::{BroadPhase, ColliderBuilder, ColliderSet};
+    extern crate alloc;
+    use alloc::boxed::Box;
+    use alloc::vec;
+    use alloc::vec::Vec;
 
     #[test]
     fn test_add_update_remove() {

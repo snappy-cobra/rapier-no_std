@@ -141,7 +141,7 @@ impl IslandManager {
     }
 
     #[cfg(feature = "parallel")]
-    pub(crate) fn active_island_range(&self, island_id: usize) -> std::ops::Range<usize> {
+    pub(crate) fn active_island_range(&self, island_id: usize) -> core::ops::Range<usize> {
         self.active_islands[island_id]..self.active_islands[island_id + 1]
     }
 

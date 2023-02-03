@@ -3,7 +3,7 @@ use bevy::render::mesh::{Indices, VertexAttributeValues};
 
 //use crate::objects::plane::Plane;
 use na::{point, Point3, Vector3};
-use std::collections::HashMap;
+use hashbrown::HashMap;
 
 use bevy::pbr::wireframe::Wireframe;
 use bevy::render::render_resource::PrimitiveTopology;

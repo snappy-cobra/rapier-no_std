@@ -25,8 +25,8 @@ use crate::pipeline::{
 use crate::prelude::{CollisionEventFlags, MultibodyJointSet};
 use alloc::sync::Arc;
 use parry::query::{DefaultQueryDispatcher, PersistentQueryDispatcher};
-use parry::utils::hashmap::HashMap;
 use parry::utils::IsometryOpt;
+use hashbrown::HashMap;
 
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 #[derive(Copy, Clone, Debug, PartialEq, Eq, Default)]

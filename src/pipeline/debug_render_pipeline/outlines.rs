@@ -8,7 +8,7 @@ use crate::geometry::{Ball, Cuboid};
 use crate::geometry::{Cone, Cylinder};
 use crate::math::{Point, Real, Vector};
 use core::any::TypeId;
-use parry::utils::hashmap::HashMap;
+use hashbrown::HashMap;
 
 #[cfg(feature = "dim2")]
 pub fn instances(nsubdivs: u32) -> HashMap<TypeId, Vec<Point<Real>>> {

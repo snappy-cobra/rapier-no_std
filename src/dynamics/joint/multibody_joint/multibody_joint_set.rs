@@ -410,7 +410,7 @@ impl MultibodyJointSet {
     }
 }
 
-impl std::ops::Index<MultibodyIndex> for MultibodyJointSet {
+impl core::ops::Index<MultibodyIndex> for MultibodyJointSet {
     type Output = Multibody;
 
     fn index(&self, index: MultibodyIndex) -> &Multibody {

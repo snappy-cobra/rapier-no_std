@@ -1,3 +1,9 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
+
 use crate::dynamics::MassProperties;
 use crate::geometry::{
     ColliderChanges, ColliderHandle, ColliderMassProps, ColliderParent, ColliderPosition,
@@ -641,7 +647,7 @@ impl RigidBodyVelocity {
     }
 }
 
-impl std::ops::Mul<Real> for RigidBodyVelocity {
+impl core::ops::Mul<Real> for RigidBodyVelocity {
     type Output = Self;
 
     #[must_use]
@@ -653,7 +659,7 @@ impl std::ops::Mul<Real> for RigidBodyVelocity {
     }
 }
 
-impl std::ops::Add<RigidBodyVelocity> for RigidBodyVelocity {
+impl core::ops::Add<RigidBodyVelocity> for RigidBodyVelocity {
     type Output = Self;
 
     #[must_use]
@@ -665,7 +671,7 @@ impl std::ops::Add<RigidBodyVelocity> for RigidBodyVelocity {
     }
 }
 
-impl std::ops::AddAssign<RigidBodyVelocity> for RigidBodyVelocity {
+impl core::ops::AddAssign<RigidBodyVelocity> for RigidBodyVelocity {
     #[must_use]
     fn add_assign(&mut self, rhs: Self) {
         self.linvel += rhs.linvel;

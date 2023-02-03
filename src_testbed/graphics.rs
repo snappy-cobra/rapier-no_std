@@ -15,7 +15,7 @@ use rapier::math::{Isometry, Real, Vector};
 // use crate::objects::mesh::Mesh;
 use rand::{Rng, SeedableRng};
 use rand_pcg::Pcg32;
-use std::collections::HashMap;
+use hashbrown::HashMap;
 
 #[cfg(feature = "dim2")]
 pub type BevyMaterial = ColorMaterial;

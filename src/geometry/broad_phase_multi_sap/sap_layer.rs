@@ -1,3 +1,9 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
+
 use super::{SAPProxies, SAPProxy, SAPRegion, SAPRegionPool};
 use crate::geometry::broad_phase_multi_sap::DELETED_AABB_VALUE;
 use crate::geometry::{Aabb, SAPProxyIndex};

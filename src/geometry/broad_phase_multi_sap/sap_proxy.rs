@@ -1,8 +1,14 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
+
 use super::NEXT_FREE_SENTINEL;
 use crate::geometry::broad_phase_multi_sap::SAPRegion;
 use crate::geometry::ColliderHandle;
 use parry::bounding_volume::Aabb;
-use std::ops::{Index, IndexMut};
+use core::ops::{Index, IndexMut};
 
 pub type SAPProxyIndex = u32;
 

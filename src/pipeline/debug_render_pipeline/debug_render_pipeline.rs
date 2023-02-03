@@ -15,7 +15,7 @@ use crate::pipeline::debug_render_pipeline::debug_render_backend::DebugRenderObj
 use crate::pipeline::debug_render_pipeline::DebugRenderStyle;
 use crate::utils::WBasis;
 use std::any::TypeId;
-use std::collections::HashMap;
+use hashbrown::HashMap;
 
 bitflags::bitflags! {
     /// Flags indicating what part of the physics engine should be rendered

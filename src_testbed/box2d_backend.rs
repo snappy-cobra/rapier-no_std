@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use hashbrown::HashMap;
 
 use na::{Isometry2, Vector2};
 use rapier::counters::Counters;

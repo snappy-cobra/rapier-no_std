@@ -1,3 +1,9 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
+
 pub use self::broad_phase::BroadPhase;
 pub use self::broad_phase_pair_event::{BroadPhasePairEvent, ColliderPair};
 pub use self::sap_proxy::SAPProxyIndex;
