@@ -255,15 +255,15 @@ impl PhysicsPipeline {
         {
             use crate::geometry::ContactManifold;
             use rayon::prelude::*;
-            use std::sync::atomic::Ordering;
+            use alloc::sync::atomic::Ordering;
 
             let num_islands = islands.num_islands();
             let solvers = &mut self.solvers[..num_islands];
-            let bodies = &std::sync::atomic::AtomicPtr::new(bodies as *mut _);
-            let manifolds = &std::sync::atomic::AtomicPtr::new(&mut manifolds as *mut _);
+            let bodies = &alloc::sync::atomic::AtomicPtr::new(bodies as *mut _);
+            let manifolds = &alloc::sync::atomic::AtomicPtr::new(&mut manifolds as *mut _);
             let impulse_joints =
-                &std::sync::atomic::AtomicPtr::new(impulse_joints.joints_vec_mut() as *mut _);
-            let multibody_joints = &std::sync::atomic::AtomicPtr::new(multibody_joints as *mut _);
+                &alloc::sync::atomic::AtomicPtr::new(impulse_joints.joints_vec_mut() as *mut _);
+            let multibody_joints = &alloc::sync::atomic::AtomicPtr::new(multibody_joints as *mut _);
             let manifold_indices = &self.manifold_indices[..];
             let joint_constraint_indices = &self.joint_constraint_indices[..];
 
@@ -275,13 +275,13 @@ impl PhysicsPipeline {
                     .enumerate()
                     .for_each(|(island_id, solver)| {
                         let bodies: &mut RigidBodySet =
-                            unsafe { std::mem::transmute(bodies.load(Ordering::Relaxed)) };
+                            unsafe { core::mem::transmute(bodies.load(Ordering::Relaxed)) };
                         let manifolds: &mut Vec<&mut ContactManifold> =
-                            unsafe { std::mem::transmute(manifolds.load(Ordering::Relaxed)) };
+                            unsafe { core::mem::transmute(manifolds.load(Ordering::Relaxed)) };
                         let impulse_joints: &mut Vec<JointGraphEdge> =
-                            unsafe { std::mem::transmute(impulse_joints.load(Ordering::Relaxed)) };
+                            unsafe { core::mem::transmute(impulse_joints.load(Ordering::Relaxed)) };
                         let multibody_joints: &mut MultibodyJointSet = unsafe {
-                            std::mem::transmute(multibody_joints.load(Ordering::Relaxed))
+                            core::mem::transmute(multibody_joints.load(Ordering::Relaxed))
                         };
 
                         solver.init_and_solve(

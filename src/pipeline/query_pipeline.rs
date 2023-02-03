@@ -23,7 +23,7 @@ use parry::query::visitors::{
 use parry::query::{DefaultQueryDispatcher, NonlinearRigidMotion, QueryDispatcher, TOI};
 use parry::shape::{FeatureId, Shape, TypedSimdCompositeShape};
 use parry::utils::DefaultStorage;
-use std::sync::Arc;
+use alloc::sync::Arc;
 
 /// A pipeline for performing queries on all the colliders of a scene.
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]

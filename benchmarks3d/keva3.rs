@@ -19,7 +19,7 @@ pub fn build_block(
     let mut color1 = [0.6, 1.0, 0.6];
 
     for i in 0..numy {
-        std::mem::swap(&mut numx, &mut numz);
+        core::mem::swap(&mut numx, &mut numz);
         let dim = dimensions[i % 2];
         let y = dim.y * i as f32 * 2.0;
 
@@ -48,7 +48,7 @@ pub fn build_block(
                 colliders.insert_with_parent(collider, handle, bodies);
 
                 testbed.set_initial_body_color(handle, color0);
-                std::mem::swap(&mut color0, &mut color1);
+                core::mem::swap(&mut color0, &mut color1);
             }
         }
     }
@@ -68,7 +68,7 @@ pub fn build_block(
             let collider = ColliderBuilder::cuboid(dim.x, dim.y, dim.z);
             colliders.insert_with_parent(collider, handle, bodies);
             testbed.set_initial_body_color(handle, color0);
-            std::mem::swap(&mut color0, &mut color1);
+            core::mem::swap(&mut color0, &mut color1);
         }
     }
 }

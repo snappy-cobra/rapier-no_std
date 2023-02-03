@@ -276,7 +276,7 @@ impl GraphicsManager {
             .copied()
             .unwrap_or(self.ground_color);
         let color = self.c2color.get(&handle).copied().unwrap_or(color);
-        let mut nodes = std::mem::replace(
+        let mut nodes = core::mem::replace(
             self.b2sn.entry(collider_parent).or_insert(vec![]),
             Vec::new(),
         );

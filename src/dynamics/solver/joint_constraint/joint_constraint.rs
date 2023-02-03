@@ -274,7 +274,7 @@ impl AnyJointVelocityConstraint {
         let flipped = !bodies[handle2].is_dynamic();
 
         let (local_frame1, local_frame2) = if flipped {
-            std::mem::swap(&mut handle1, &mut handle2);
+            core::mem::swap(&mut handle1, &mut handle2);
             (joint.data.local_frame2, joint.data.local_frame1)
         } else {
             (joint.data.local_frame1, joint.data.local_frame2)
@@ -396,7 +396,7 @@ impl AnyJointVelocityConstraint {
 
         for ii in 0..SIMD_WIDTH {
             if !status2[ii].is_dynamic() {
-                std::mem::swap(&mut handles1[ii], &mut handles2[ii]);
+                core::mem::swap(&mut handles1[ii], &mut handles2[ii]);
                 flipped[ii] = true;
             }
         }

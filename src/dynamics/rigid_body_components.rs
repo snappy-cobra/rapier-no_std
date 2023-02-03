@@ -485,7 +485,7 @@ impl RigidBodyVelocity {
     #[inline]
     #[cfg(feature = "dim2")]
     pub fn as_vector(&self) -> &na::Vector3<Real> {
-        unsafe { std::mem::transmute(self) }
+        unsafe { core::mem::transmute(self) }
     }
 
     /// This velocity seen as a mutable vector.
@@ -494,7 +494,7 @@ impl RigidBodyVelocity {
     #[inline]
     #[cfg(feature = "dim2")]
     pub fn as_vector_mut(&mut self) -> &mut na::Vector3<Real> {
-        unsafe { std::mem::transmute(self) }
+        unsafe { core::mem::transmute(self) }
     }
 
     /// This velocity seen as a vector.
@@ -503,7 +503,7 @@ impl RigidBodyVelocity {
     #[inline]
     #[cfg(feature = "dim3")]
     pub fn as_vector(&self) -> &na::Vector6<Real> {
-        unsafe { std::mem::transmute(self) }
+        unsafe { core::mem::transmute(self) }
     }
 
     /// This velocity seen as a mutable vector.
@@ -512,7 +512,7 @@ impl RigidBodyVelocity {
     #[inline]
     #[cfg(feature = "dim3")]
     pub fn as_vector_mut(&mut self) -> &mut na::Vector6<Real> {
-        unsafe { std::mem::transmute(self) }
+        unsafe { core::mem::transmute(self) }
     }
 
     /// Return `self` rotated by `rotation`.

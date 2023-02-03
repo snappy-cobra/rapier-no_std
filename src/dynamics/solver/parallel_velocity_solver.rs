@@ -14,7 +14,7 @@ use crate::math::Real;
 use crate::utils::WAngularInertia;
 
 use na::DVector;
-use std::sync::atomic::Ordering;
+use alloc::sync::atomic::Ordering;
 
 pub(crate) struct ParallelVelocitySolver {
     pub mj_lambdas: Vec<DeltaVel<Real>>,

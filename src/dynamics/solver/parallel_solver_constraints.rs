@@ -23,7 +23,7 @@ use crate::{
     math::SIMD_WIDTH,
 };
 use na::DVector;
-use std::sync::atomic::Ordering;
+use alloc::sync::atomic::Ordering;
 
 // pub fn init_constraint_groups(
 //     &mut self,

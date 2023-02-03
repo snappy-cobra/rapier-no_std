@@ -144,7 +144,7 @@ impl Drop for PhysxWorld {
     fn drop(&mut self) {
         let scene = self.scene.take();
         // FIXME: we get a segfault if we don't forget the scene.
-        std::mem::forget(scene);
+        core::mem::forget(scene);
     }
 }
 
@@ -295,7 +295,7 @@ impl PhysxWorld {
                     //        that mutable ref to create the next link. Yet, the link creation
                     //        methods also requires a mutable ref to the multibody_joint.
                     rapier2link.insert(rb_handle, px_link as *mut PxArticulationLink);
-                    parent = Some(unsafe { std::mem::transmute(px_link as *mut _) });
+                    parent = Some(unsafe { core::mem::transmute(px_link as *mut _) });
                 }
 
                 scene.add_articulation(articulation);
@@ -353,7 +353,7 @@ impl PhysxWorld {
 
                 unsafe {
                     let actor = if let Some(actor) = rapier2dynamic.get_mut(&rapier_handle) {
-                        std::mem::transmute(actor.as_mut())
+                        core::mem::transmute(actor.as_mut())
                     } else if let Some(actor) = rapier2link.get_mut(&rapier_handle) {
                         *actor as *mut _
                     } else {
@@ -625,7 +625,7 @@ fn physx_collider_from_rapier_collider(
             heightfield_desc = physx_sys::PxHeightFieldDesc_new();
             heightfield_desc.nbRows = heights.nrows() as u32;
             heightfield_desc.nbColumns = heights.ncols() as u32;
-            heightfield_desc.samples.stride = std::mem::size_of::<PxHeightFieldSample>() as u32;
+            heightfield_desc.samples.stride = core::mem::size_of::<PxHeightFieldSample>() as u32;
             heightfield_desc.samples.data = samples.as_ptr() as *const std::ffi::c_void;
         }
 
@@ -659,7 +659,7 @@ fn physx_collider_from_rapier_collider(
         unsafe {
             convex_desc = physx_sys::PxConvexMeshDesc_new();
             convex_desc.points.count = vertices.len() as u32;
-            convex_desc.points.stride = (3 * std::mem::size_of::<f32>()) as u32;
+            convex_desc.points.stride = (3 * core::mem::size_of::<f32>()) as u32;
             convex_desc.points.data = vertices.as_ptr() as *const std::ffi::c_void;
             convex_desc.flags = PxConvexFlags {
                 mBits: physx_sys::PxConvexFlag::eCOMPUTE_CONVEX as u16,
@@ -687,11 +687,11 @@ fn physx_collider_from_rapier_collider(
             mesh_desc = physx_sys::PxTriangleMeshDesc_new();
 
             mesh_desc.points.count = trimesh.vertices().len() as u32;
-            mesh_desc.points.stride = (3 * std::mem::size_of::<f32>()) as u32;
+            mesh_desc.points.stride = (3 * core::mem::size_of::<f32>()) as u32;
             mesh_desc.points.data = vertices.as_ptr() as *const std::ffi::c_void;
 
             mesh_desc.triangles.count = (indices.len() as u32) / 3;
-            mesh_desc.triangles.stride = (3 * std::mem::size_of::<u32>()) as u32;
+            mesh_desc.triangles.stride = (3 * core::mem::size_of::<u32>()) as u32;
             mesh_desc.triangles.data = indices.as_ptr() as *const std::ffi::c_void;
         }
 

@@ -58,7 +58,7 @@ impl WVelocityGroundConstraint {
 
         for ii in 0..SIMD_WIDTH {
             if manifolds[ii].data.relative_dominance < 0 {
-                std::mem::swap(&mut handles1[ii], &mut handles2[ii]);
+                core::mem::swap(&mut handles1[ii], &mut handles2[ii]);
                 flipped[ii] = -1.0;
             }
         }

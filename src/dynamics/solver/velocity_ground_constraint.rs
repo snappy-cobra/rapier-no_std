@@ -49,7 +49,7 @@ impl VelocityGroundConstraint {
         let flipped = manifold.data.relative_dominance < 0;
 
         let (force_dir1, flipped_multiplier) = if flipped {
-            std::mem::swap(&mut handle1, &mut handle2);
+            core::mem::swap(&mut handle1, &mut handle2);
             (manifold.data.normal, -1.0)
         } else {
             (-manifold.data.normal, 1.0)
@@ -113,7 +113,7 @@ impl VelocityGroundConstraint {
                     #[allow(invalid_value)]
                     out_constraints.resize_with(new_len, || {
                         AnyVelocityConstraint::NongroupedGround(
-                            std::mem::MaybeUninit::uninit().assume_init(),
+                            core::mem::MaybeUninit::uninit().assume_init(),
                         )
                     });
                 }

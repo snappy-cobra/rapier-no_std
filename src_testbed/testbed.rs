@@ -1,5 +1,5 @@
 use std::env;
-use std::mem;
+use core::mem;
 
 use bevy::prelude::*;
 

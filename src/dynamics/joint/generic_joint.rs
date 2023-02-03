@@ -487,7 +487,7 @@ macro_rules! joint_conversion_methods(
             if self.locked_axes == $axes {
                 // SAFETY: this is OK because the target joint type is
                 //         a `repr(transparent)` newtype of `Joint`.
-                Some(unsafe { std::mem::transmute(self) })
+                Some(unsafe { core::mem::transmute(self) })
             } else {
                 None
             }
@@ -499,7 +499,7 @@ macro_rules! joint_conversion_methods(
             if self.locked_axes == $axes {
                 // SAFETY: this is OK because the target joint type is
                 //         a `repr(transparent)` newtype of `Joint`.
-                Some(unsafe { std::mem::transmute(self) })
+                Some(unsafe { core::mem::transmute(self) })
             } else {
                 None
             }

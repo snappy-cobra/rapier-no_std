@@ -1,4 +1,4 @@
-extern crate alloc;
+extern crate allocg
 use alloc::boxed::Box;
 use alloc::vec;
 use alloc::vec::Vec;

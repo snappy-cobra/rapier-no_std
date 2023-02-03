@@ -222,7 +222,7 @@ impl VelocityConstraint {
                     #[allow(invalid_value)]
                     out_constraints.resize_with(new_len, || {
                         AnyVelocityConstraint::Nongrouped(
-                            std::mem::MaybeUninit::uninit().assume_init(),
+                            core::mem::MaybeUninit::uninit().assume_init(),
                         )
                     });
                 }
