@@ -10,6 +10,7 @@
 //!
 //! User documentation for Rapier is on [the official Rapier site](https://rapier.rs/docs/).
 
+#![no_std]
 #![deny(bare_trait_objects)]
 #![warn(missing_docs)] // FIXME: deny that
 

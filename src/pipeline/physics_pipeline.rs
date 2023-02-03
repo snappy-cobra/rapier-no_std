@@ -1,4 +1,10 @@
 //! Physics pipeline structures.
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
+
 
 use crate::counters::Counters;
 #[cfg(not(feature = "parallel"))]

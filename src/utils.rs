@@ -1,4 +1,8 @@
 //! Miscellaneous utilities.
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
 
 use na::{
     Matrix1, Matrix2, Matrix3, Point2, Point3, RowVector2, Scalar, SimdRealField, UnitComplex,

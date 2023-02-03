@@ -1,6 +1,11 @@
 #[cfg(feature = "parallel")]
 use rayon::prelude::*;
 
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::data::graph::EdgeIndex;
 use crate::data::Coarena;
 use crate::dynamics::{
@@ -20,8 +25,8 @@ use crate::pipeline::{
 use crate::prelude::{CollisionEventFlags, MultibodyJointSet};
 use parry::query::{DefaultQueryDispatcher, PersistentQueryDispatcher};
 use parry::utils::IsometryOpt;
-use std::collections::HashMap;
-use std::sync::Arc;
+use parry::utils::hashmap::HashMap;
+use alloc::sync::Arc;
 
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 #[derive(Copy, Clone, Debug, PartialEq, Eq, Default)]
@@ -963,7 +968,7 @@ impl NarrowPhase {
                     // Apply the user-defined contact modification.
                     if active_hooks.contains(ActiveHooks::MODIFY_SOLVER_CONTACTS) {
                         let mut modifiable_solver_contacts =
-                            std::mem::replace(&mut manifold.data.solver_contacts, Vec::new());
+                            core::mem::replace(&mut manifold.data.solver_contacts, Vec::new());
                         let mut modifiable_user_data = manifold.data.user_data;
                         let mut modifiable_normal = manifold.data.normal;
 

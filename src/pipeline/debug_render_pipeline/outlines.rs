@@ -1,9 +1,14 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::geometry::{Ball, Cuboid};
 #[cfg(feature = "dim3")]
 use crate::geometry::{Cone, Cylinder};
 use crate::math::{Point, Real, Vector};
-use std::any::TypeId;
-use std::collections::HashMap;
+use core::any::TypeId;
+use parry::utils::hashmap::HashMap;
 
 #[cfg(feature = "dim2")]
 pub fn instances(nsubdivs: u32) -> HashMap<TypeId, Vec<Point<Real>>> {

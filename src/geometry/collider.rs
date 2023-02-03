@@ -1,3 +1,5 @@
+use alloc::boxed::Box;
+
 use crate::dynamics::{CoefficientCombineRule, MassProperties, RigidBodyHandle};
 use crate::geometry::{
     ActiveCollisionTypes, ColliderBroadPhaseData, ColliderChanges, ColliderFlags,

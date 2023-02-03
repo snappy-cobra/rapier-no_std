@@ -1,3 +1,5 @@
+use alloc::boxed::Box;
+
 use crate::dynamics::{
     LockedAxes, MassProperties, RigidBodyActivation, RigidBodyAdditionalMassProps, RigidBodyCcd,
     RigidBodyChanges, RigidBodyColliders, RigidBodyDamping, RigidBodyDominance, RigidBodyForces,

@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use super::{outlines, DebugRenderBackend};
 use crate::dynamics::{
     GenericJoint, ImpulseJointSet, MultibodyJointSet, RigidBodySet, RigidBodyType,

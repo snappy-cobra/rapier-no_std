@@ -1,3 +1,7 @@
+extern crate alloc;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use super::{
     BroadPhasePairEvent, ColliderPair, SAPLayer, SAPProxies, SAPProxy, SAPProxyData, SAPRegionPool,
 };

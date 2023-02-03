@@ -1,5 +1,9 @@
 //! Physics pipeline structures.
 
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
 use crate::dynamics::{ImpulseJointSet, MultibodyJointSet};
 use crate::geometry::{
     BroadPhase, BroadPhasePairEvent, ColliderChanges, ColliderHandle, ColliderPair, NarrowPhase,

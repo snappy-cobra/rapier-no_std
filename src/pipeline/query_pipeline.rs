@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::dynamics::RigidBodyHandle;
 use crate::geometry::{
     Aabb, Collider, ColliderHandle, InteractionGroups, PointProjection, Qbvh, Ray, RayIntersection,

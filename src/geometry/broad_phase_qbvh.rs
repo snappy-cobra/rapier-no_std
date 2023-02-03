@@ -1,3 +1,6 @@
+extern crate alloc;
+use alloc::vec;
+use alloc::vec::Vec;
 use crate::geometry::{BroadPhasePairEvent, ColliderHandle, ColliderPair, ColliderSet};
 use parry::bounding_volume::BoundingVolume;
 use parry::math::Real;

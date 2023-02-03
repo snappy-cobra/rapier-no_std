@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use super::{SAPAxis, SAPProxies};
 use crate::geometry::SAPProxyIndex;
 use crate::math::DIM;

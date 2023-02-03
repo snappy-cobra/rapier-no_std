@@ -1,4 +1,5 @@
 //! Structures related to dynamics: bodies, impulse_joints, etc.
+extern crate alloc;
 
 pub use self::ccd::CCDSolver;
 pub use self::coefficient_combine_rule::CoefficientCombineRule;
