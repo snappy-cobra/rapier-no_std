@@ -10,9 +10,9 @@ use crate::math::Real;
 use crate::parry::utils::SortedPair;
 use crate::pipeline::{EventHandler, QueryPipeline, QueryPipelineMode};
 use crate::prelude::{ActiveEvents, CollisionEventFlags};
+use alloc::collections::BinaryHeap;
 use parry::query::{DefaultQueryDispatcher, QueryDispatcher};
 use parry::utils::hashmap::HashMap;
-use alloc::collections::BinaryHeap;
 
 pub enum PredictedImpacts {
     Impacts(HashMap<RigidBodyHandle, Real>),

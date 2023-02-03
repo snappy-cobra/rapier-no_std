@@ -5,7 +5,6 @@ use alloc::boxed::Box;
 use alloc::vec;
 use alloc::vec::Vec;
 
-
 /// Performance counters related to each stage of the time step.
 #[derive(Default, Clone, Copy)]
 pub struct StagesCounters {

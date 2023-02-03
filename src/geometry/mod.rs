@@ -191,7 +191,8 @@ pub use parry::shape::*;
 
 #[cfg(feature = "serde-serialize")]
 pub(crate) fn default_persistent_query_dispatcher(
-) -> alloc::sync::Arc<dyn parry::query::PersistentQueryDispatcher<ContactManifoldData, ContactData>> {
+) -> alloc::sync::Arc<dyn parry::query::PersistentQueryDispatcher<ContactManifoldData, ContactData>>
+{
     alloc::sync::Arc::new(parry::query::DefaultQueryDispatcher)
 }
 

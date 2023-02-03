@@ -3,12 +3,12 @@
 //! See  https://github.com/fitzgen/generational-arena/blob/master/src/lib.rs.
 //! This has been modified to have a fully deterministic deserialization (including for the order of
 //! Index attribution after a deserialization of the arena.
-use parry::partitioning::IndexedData;
 use core::cmp;
 use core::iter::{self, Extend, FromIterator, FusedIterator};
 use core::mem;
 use core::ops;
 use core::slice;
+use parry::partitioning::IndexedData;
 
 extern crate alloc;
 use alloc::boxed::Box;

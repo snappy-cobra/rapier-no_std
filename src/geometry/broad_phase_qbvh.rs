@@ -1,7 +1,7 @@
 extern crate alloc;
+use crate::geometry::{BroadPhasePairEvent, ColliderHandle, ColliderPair, ColliderSet};
 use alloc::vec;
 use alloc::vec::Vec;
-use crate::geometry::{BroadPhasePairEvent, ColliderHandle, ColliderPair, ColliderSet};
 use parry::bounding_volume::BoundingVolume;
 use parry::math::Real;
 use parry::partitioning::Qbvh;

@@ -5,8 +5,8 @@ use alloc::vec::Vec;
 
 use crate::math::{AngVector, Vector, SPATIAL_DIM};
 use crate::utils::WReal;
-use na::{DVectorView, DVectorViewMut, Scalar};
 use core::ops::{AddAssign, Sub};
+use na::{DVectorView, DVectorViewMut, Scalar};
 
 #[derive(Copy, Clone, Debug, Default)]
 #[repr(C)]

@@ -4,8 +4,6 @@ use alloc::boxed::Box;
 use alloc::vec;
 use alloc::vec::Vec;
 
-
-
 use crate::counters::Counters;
 #[cfg(not(feature = "parallel"))]
 use crate::dynamics::IslandSolver;

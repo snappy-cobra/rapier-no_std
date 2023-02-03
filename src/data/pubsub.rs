@@ -4,9 +4,9 @@ use core::marker::PhantomData;
 
 extern crate alloc;
 use alloc::boxed::Box;
+use alloc::collections::VecDeque;
 use alloc::vec;
 use alloc::vec::Vec;
-use alloc::collections::VecDeque;
 
 /// A permanent subscription to a pub-sub queue.
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]

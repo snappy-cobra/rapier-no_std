@@ -12,7 +12,6 @@ use alloc::boxed::Box;
 use alloc::vec;
 use alloc::vec::Vec;
 
-
 /// Node identifier.
 #[derive(Copy, Clone, Default, PartialEq, PartialOrd, Eq, Ord, Hash, Debug)]
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]

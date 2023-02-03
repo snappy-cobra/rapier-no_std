@@ -23,10 +23,10 @@ use crate::pipeline::{
     PhysicsHooks,
 };
 use crate::prelude::{CollisionEventFlags, MultibodyJointSet};
-use parry::query::{DefaultQueryDispatcher, PersistentQueryDispatcher};
-use parry::utils::IsometryOpt;
-use parry::utils::hashmap::HashMap;
 use alloc::sync::Arc;
+use parry::query::{DefaultQueryDispatcher, PersistentQueryDispatcher};
+use parry::utils::hashmap::HashMap;
+use parry::utils::IsometryOpt;
 
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 #[derive(Copy, Clone, Debug, PartialEq, Eq, Default)]
