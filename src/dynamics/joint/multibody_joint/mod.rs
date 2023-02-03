@@ -1,5 +1,10 @@
 //! MultibodyJoints using the reduced-coordinates formalism or using constraints.
 
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 pub use self::multibody::Multibody;
 pub use self::multibody_joint::MultibodyJoint;
 pub use self::multibody_joint_set::{MultibodyIndex, MultibodyJointHandle, MultibodyJointSet};

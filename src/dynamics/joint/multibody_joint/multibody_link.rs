@@ -1,4 +1,9 @@
-use std::ops::{Deref, DerefMut};
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
+use core::ops::{Deref, DerefMut};
 
 use crate::dynamics::{MultibodyJoint, RigidBodyHandle};
 use crate::math::{Isometry, Real, Vector};

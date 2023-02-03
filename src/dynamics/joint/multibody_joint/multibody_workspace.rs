@@ -1,3 +1,9 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
+
 use crate::dynamics::RigidBodyVelocity;
 use crate::math::Real;
 use na::DVector;

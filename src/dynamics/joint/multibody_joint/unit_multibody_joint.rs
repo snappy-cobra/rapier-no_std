@@ -1,5 +1,10 @@
 #![allow(missing_docs)] // For downcast.
 
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::dynamics::joint::MultibodyLink;
 use crate::dynamics::solver::{
     AnyJointVelocityConstraint, JointGenericVelocityGroundConstraint, WritebackId,

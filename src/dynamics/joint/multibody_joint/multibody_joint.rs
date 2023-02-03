@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 use crate::dynamics::solver::AnyJointVelocityConstraint;
 use crate::dynamics::{
     joint, FixedJointBuilder, GenericJoint, IntegrationParameters, Multibody, MultibodyLink,

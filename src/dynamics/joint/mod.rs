@@ -1,3 +1,8 @@
+extern crate alloc;
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc::vec::Vec;
+
 pub use self::fixed_joint::*;
 pub use self::generic_joint::*;
 pub use self::impulse_joint::*;
